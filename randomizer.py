@@ -42,7 +42,7 @@ def weighted_choice(list):
         if rand < 0:
             return elem.get("value")
 
-    # This base shouldn't be needed, but is here just in case
+    # This base case shouldn't be needed, but is here just in case
     return list[0]["value"]
 
 requirements = [
@@ -51,66 +51,78 @@ requirements = [
         "weight": 200,
     },
     {
-        "value": "Your map's should be [theme] themed.",
+        "value": "Your map must be [theme] themed.",
         "weight": 30,
     },
     {
-        "value": "Your map's geometry should have many [shape] elements.",
+        "value": "Your map's geometry must have many [shape] elements.",
         "weight": 30,
     },
     {
         "value": "[special]",
-        "weight": 30,
+        "weight": 100,
     },
 ]
 
 special_requirements = [
     {
-        "value": "Your level may not have any item_health entities.",
+        "value": "Your map may not have any item_health entities.",
         "weight": 100,
     },
     {
-        "value": "Your level must have some sort of puzzle in it.",
+        "value": "Your map must have some sort of puzzle in it.",
         "weight": 100,
     },
     {
-        "value": "Your level must have at least 3 pools of lava.",
+        "value": "Your map must have at least 3 pools of lava.",
         "weight": 100,
     },
     {
-        "value": "Your level's exit must be next to the start point.",
+        "value": "Your map's exit must be near the start point.",
         "weight": 100,
     },
     {
-        "value": "Your level must have at least one of every monster. (Except Cthon and Shub-Niggurath)",
+        "value": "Your map may only have two monster types.",
         "weight": 100,
     },
     {
-        "value": "Your level may only have two monster types.",
+        "value": "Your map must involve the player climbing up the map a distance of 1500 units or more.",
         "weight": 100,
     },
     {
-        "value": "Your level must involve the player climbing up the\nmap a distance of 1500 units or more.",
+        "value": "Your map must have some platforming in it.",
         "weight": 100,
     },
     {
-        "value": "Your level must have some platforming in it.",
+        "value": "Your map must be shaped like something when viewed from above or from a certain angle. (Like e3m2 from Doom.)",
         "weight": 100,
     },
     {
-        "value": "Your level should be shaped like something when viewed from above or from a certain angle. (Like e3m2 from Doom.)",
+        "value": "Your map must use switchable lights somehow.",
+        "weight": 300,
+    },
+    {
+        "value": "Your map must be playable in both Singleplayer and Deathmatch.",
         "weight": 100,
     },
     {
-        "value": "Your level must use switchable lights somehow.",
+        "value": "The playable area of your map must fit within a 768x768 horizontal area. It can be as tall as you wish.",
         "weight": 100,
     },
     {
-        "value": "Your level must be playable in both Singleplayer and Deathmatch",
+        "value": "Your map must use at least one custom texture you created.",
         "weight": 100,
     },
     {
-        "value": "The playable area of your level must fit within a 768x768 horizontal area. It can be as tall as you wish.",
+        "value": "Your map must have some sort of time-sensitive element in it.",
+        "weight": 100,
+    },
+    {
+        "value": "Your map must have non-linear progression.",
+        "weight": 100,
+    },
+    {
+        "value": "Your map must have func_doors in it that can crush players and/or monsters.",
         "weight": 100,
     },
 ]
