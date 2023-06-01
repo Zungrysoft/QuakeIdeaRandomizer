@@ -14,15 +14,10 @@ def main():
         r = weighted_choice(requirements)
 
         # Pick content for requirements
+        r = r.replace("[entity]", weighted_choice(entities))
         r = r.replace("[theme]", weighted_choice(themes))
         r = r.replace("[shape]", weighted_choice(shapes))
         r = r.replace("[special]", weighted_choice(special_requirements))
-
-        # Entity count content has some special rules
-        entity_data = weighted_choice(entities)
-        r = r.replace("[entity]", entity_data["classname"])
-        r = r.replace("[entity_count]", str(entity_data["count"]))
-        r = r.replace("[entity_plural]", "" if entity_data["count"] == 1 else "s")
 
         # Make sure this requirement hasn't been done before
         if not r in requirements_finished:
@@ -47,7 +42,7 @@ def weighted_choice(list):
 
 requirements = [
     {
-        "value": "Your map must contain at least [entity_count] instance[entity_plural] of [entity] on all difficulties.",
+        "value": "Your map must be based around on using [entity] entity.",
         "weight": 200,
     },
     {
@@ -75,7 +70,7 @@ special_requirements = [
     },
     {
         "value": "Your map must have at least 3 pools of lava.",
-        "weight": 100,
+        "weight": 20,
     },
     {
         "value": "Your map's exit must be near the start point.",
@@ -134,200 +129,119 @@ special_requirements = [
 entities = [
     # Monsters
     {
-        "value": {
-            "classname": "monster_tarbaby",
-            "count": 6,
-        },
+        "value": "monster_tarbaby",
         "weight": 30,
     },
     {
-        "value": {
-            "classname": "monster_shambler",
-            "count": 3,
-        },
+        "value": "monster_shambler",
         "weight": 100,
     },
     {
-        "value": {
-            "classname": "monster_shalrath",
-            "count": 4,
-        },
+        "value": "monster_shalrath",
         "weight": 100,
     },
     {
-        "value": {
-            "classname": "monster_ogre",
-            "count": 10,
-        },
+        "value": "monster_ogre",
         "weight": 100,
     },
     {
-        "value": {
-            "classname": "monster_fish",
-            "count": 8,
-        },
+        "value": "monster_fish",
         "weight": 100,
     },
     # {
-    #     "value": {
-    #         "classname": "monster_dog",
-    #         "count": 12,
-    #     },
+    #     "value": "monster_dog",
     #     "weight": 100,
     # },
     {
-        "value": {
-            "classname": "monster_enforcer",
-            "count": 12,
-        },
+        "value": "monster_enforcer",
         "weight": 100,
     },
     {
-        "value": {
-            "classname": "monster_demon1",
-            "count": 7,
-        },
+        "value": "monster_demon1",
         "weight": 100,
     },
     {
-        "value": {
-            "classname": "monster_wizard",
-            "count": 10,
-        },
+        "value": "monster_wizard",
         "weight": 100,
     },
     {
-        "value": {
-            "classname": "monster_zombie",
-            "count": 15,
-        },
+        "value": "monster_zombie",
         "weight": 100,
     },
 
     # Brushes
     {
-        "value": {
-            "classname": "trigger_push",
-            "count": 7,
-        },
+        "value": "trigger_push",
         "weight": 140,
     },
     {
-        "value": {
-            "classname": "trigger_teleport",
-            "count": 7,
-        },
+        "value": "trigger_teleport",
         "weight": 140,
     },
     {
-        "value": {
-            "classname": "trigger_monsterjump",
-            "count": 6,
-        },
+        "value": "trigger_monsterjump",
         "weight": 140,
     },
     {
-        "value": {
-            "classname": "trigger_secret",
-            "count": 12,
-        },
+        "value": "trigger_secret",
         "weight": 90,
     },
     {
-        "value": {
-            "classname": "func_button",
-            "count": 12,
-        },
+        "value": "func_button",
         "weight": 140,
     },
     {
-        "value": {
-            "classname": "func_train",
-            "count": 5,
-        },
+        "value": "func_train",
         "weight": 140,
     },
     {
-        "value": {
-            "classname": "func_plat",
-            "count": 8,
-        },
+        "value": "func_plat",
         "weight": 140,
     },
 
     # Misc
     {
-        "value": {
-            "classname": "trigger_counter",
-            "count": 4,
-        },
+        "value": "trigger_counter",
         "weight": 90,
     },
     {
-        "value": {
-            "classname": "misc_fireball",
-            "count": 8,
-        },
+        "value": "misc_fireball",
         "weight": 90,
     },
     {
-        "value": {
-            "classname": "misc_explobox/misc_explobox2",
-            "count": 8,
-        },
+        "value": "misc_explobox/misc_explobox2",
         "weight": 90,
     },
     {
-        "value": {
-            "classname": "trap_shooter/trap_spikeshooter",
-            "count": 10,
-        },
+        "value": "trap_shooter/trap_spikeshooter",
         "weight": 90,
     },
 
     # Items
     {
-        "value": {
-            "classname": "item_armorInv",
-            "count": 3,
-        },
+        "value": "item_armorInv",
         "weight": 40,
     },
     {
-        "value": {
-            "classname": "item_artifact_super_damage",
-            "count": 2,
-        },
+        "value": "item_artifact_super_damage",
         "weight": 40,
     },
     {
-        "value": {
-            "classname": "item_artifact_invulnerability",
-            "count": 2,
-        },
+        "value": "item_artifact_invulnerability",
         "weight": 40,
     },
     {
-        "value": {
-            "classname": "item_artifact_invisibility",
-            "count": 2,
-        },
+        "value": "item_artifact_invisibility",
         "weight": 40,
     },
     {
-        "value": {
-            "classname": "item_artifact_envirosuit",
-            "count": 3,
-        },
+        "value": "item_artifact_envirosuit",
         "weight": 40,
     },
 
     # Weapons
     {
-        "value": {
-            "classname": "weapon_rocketlauncher",
-            "count": 1,
-        },
+        "value": "weapon_rocketlauncher",
         "weight": 200,
     },
 ]
