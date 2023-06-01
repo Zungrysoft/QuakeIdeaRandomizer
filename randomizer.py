@@ -156,10 +156,6 @@ entities = [
         "value": "monster_fish",
         "weight": 100,
     },
-    # {
-    #     "value": "monster_dog",
-    #     "weight": 100,
-    # },
     {
         "value": "monster_enforcer",
         "weight": 100,
@@ -250,6 +246,10 @@ entities = [
     # Weapons
     {
         "value": "weapon_rocketlauncher",
+        "weight": 200,
+    },
+    {
+        "value": "weapon_grenadelauncher",
         "weight": 200,
     },
 ]
