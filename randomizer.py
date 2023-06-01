@@ -246,11 +246,11 @@ entities = [
     # Weapons
     {
         "value": "weapon_rocketlauncher",
-        "weight": 200,
+        "weight": 120,
     },
     {
         "value": "weapon_grenadelauncher",
-        "weight": 200,
+        "weight": 120,
     },
 ]
 
