@@ -52,7 +52,7 @@ requirements = [
     },
     {
         "value": "Your map must be [theme] themed.",
-        "weight": 30,
+        "weight": 20,
     },
     {
         "value": "Your map's geometry must have many [shape] elements.",
@@ -111,7 +111,7 @@ special_requirements = [
     },
     {
         "value": "Your map must use at least one custom texture you created.",
-        "weight": 100,
+        "weight": 70,
     },
     {
         "value": "Your map must have some sort of time-sensitive element in it.",
@@ -119,11 +119,15 @@ special_requirements = [
     },
     {
         "value": "Your map must have non-linear progression.",
-        "weight": 100,
+        "weight": 140,
     },
     {
         "value": "Your map must have func_doors in it that can crush players and/or monsters.",
         "weight": 100,
+    },
+    {
+        "value": "Your map may not have any weapons aside from weapon_grenadelauncher and weapon_rocketlauncher",
+        "weight": 40,
     },
 ]
 
@@ -351,7 +355,27 @@ themes = [
     },
     {
         "value": "Void",
-        "weight": 50,
+        "weight": 20,
+    },
+    {
+        "value": "Knave",
+        "weight": 10,
+    },
+    {
+        "value": "Insomnia",
+        "weight": 10,
+    },
+    {
+        "value": "Koohoo",
+        "weight": 10,
+    },
+    {
+        "value": "Rubicon",
+        "weight": 10,
+    },
+    {
+        "value": "Honey",
+        "weight": 10,
     },
 ]
 
