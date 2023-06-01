@@ -42,15 +42,15 @@ def weighted_choice(list):
 
 requirements = [
     {
-        "value": "Your map must be based around on using [entity] entity.",
+        "value": "Your map should make ample use of the [entity] entity.",
         "weight": 200,
     },
     {
-        "value": "Your map must be [theme] themed.",
+        "value": "Your map should be [theme] themed.",
         "weight": 20,
     },
     {
-        "value": "Your map's geometry must have many [shape] elements.",
+        "value": "Your map's geometry should have many [shape] elements.",
         "weight": 30,
     },
     {
@@ -65,7 +65,7 @@ special_requirements = [
         "weight": 100,
     },
     {
-        "value": "Your map must have some sort of puzzle in it.",
+        "value": "Your map should have some sort of puzzle in it.",
         "weight": 100,
     },
     {
@@ -73,7 +73,7 @@ special_requirements = [
         "weight": 20,
     },
     {
-        "value": "Your map's exit must be near the start point.",
+        "value": "Your map's exit should be near the start point.",
         "weight": 100,
     },
     {
@@ -81,15 +81,15 @@ special_requirements = [
         "weight": 100,
     },
     {
-        "value": "Your map must involve the player climbing up the map a distance of 1500 units or more.",
+        "value": "Your map should involve the player climbing up the map a distance of 1500 units or more.",
         "weight": 100,
     },
     {
-        "value": "Your map must have some platforming in it.",
+        "value": "Your map should have some platforming in it.",
         "weight": 100,
     },
     {
-        "value": "Your map must be shaped like something when viewed from above or from a certain angle. (Like e3m2 from Doom.)",
+        "value": "Your map should be shaped like something when viewed from above or from a certain angle. (Like e3m2 from Doom.)",
         "weight": 100,
     },
     {
@@ -97,7 +97,7 @@ special_requirements = [
         "weight": 300,
     },
     {
-        "value": "Your map must be playable in both Singleplayer and Deathmatch.",
+        "value": "Your map should be playable in both Singleplayer and Deathmatch.",
         "weight": 100,
     },
     {
@@ -109,20 +109,28 @@ special_requirements = [
         "weight": 70,
     },
     {
-        "value": "Your map must have some sort of time-sensitive element in it.",
+        "value": "Your map should have some sort of time-sensitive element in it.",
         "weight": 100,
     },
     {
-        "value": "Your map must have non-linear progression.",
+        "value": "Your map should have non-linear progression.",
         "weight": 140,
     },
     {
-        "value": "Your map must have func_doors in it that can crush players and/or monsters.",
+        "value": "Your map should have func_doors in it that can crush players and/or monsters.",
         "weight": 100,
     },
     {
         "value": "Your map may not have any weapons aside from weapon_grenadelauncher and weapon_rocketlauncher",
         "weight": 40,
+    },
+    {
+        "value": "Tell a story with your map's environment design.",
+        "weight": 30,
+    },
+    {
+        "value": "Your map may have no more than 30 monsters in it.",
+        "weight": 13,
     },
 ]
 
